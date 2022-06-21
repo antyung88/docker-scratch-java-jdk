@@ -1,5 +1,4 @@
 FROM eclipse-temurin:18-jdk-alpine
-LABEL maintainer="anthony.yung@hke.holdings"
 
 # Create a custom Java runtime
 RUN apk add binutils --no-cache

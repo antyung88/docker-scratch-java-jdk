@@ -3,7 +3,7 @@ FROM eclipse-temurin:18-jdk-alpine
 # Create a custom Java runtime
 RUN apk add binutils --no-cache
 RUN $JAVA_HOME/bin/jlink \
-         --add-modules java.base,java.compiler,java.datatransfer,java.desktop,java.instrument,java.logging,java.management,java.management.rmi,java.naming,java.net.http,java.prefs,java.rmi,java.scripting,java.se,java.security.jgss,java.security.sasl,java.sql,java.sql.rowset,java.transaction.xa,java.xml,java.xml.crypto,jdk.unsupported,jdk.management,jdk.crypto.ec \
+         --add-modules java.base,java.compiler,java.datatransfer,java.desktop,java.instrument,java.logging,java.management,java.management.rmi,java.naming,java.net.http,java.prefs,java.rmi,java.scripting,java.se,java.security.jgss,java.security.sasl,java.sql,java.sql.rowset,java.transaction.xa,java.xml,java.xml.crypto,jdk.unsupported,jdk.management,jdk.crypto.ec,java.net \
          --strip-debug \
          --no-man-pages \
          --no-header-files \

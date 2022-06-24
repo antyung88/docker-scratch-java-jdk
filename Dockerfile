@@ -1,4 +1,4 @@
-FROM eclipse-temurin:18-jdk-alpine
+FROM eclipse-temurin:18-jdk-alpine as BASE
 
 # Create a custom Java runtime
 RUN apk add binutils --no-cache
@@ -15,3 +15,7 @@ RUN $JAVA_HOME/bin/jlink \
          && strip --strip-unneeded /lib/runtime/lib/server/libjvm.so \
          && cd /lib/runtime/lib;for i in `ls /lib/runtime/lib | grep -i so | awk '{print $1}'`;do strip --strip-unneeded $i;done \
          && rm -rf /tmp/*
+
+FROM scratch
+COPY --from=BASE /lib /lib
+COPY --from=BASE /tmp /tmp

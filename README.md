@@ -1,5 +1,5 @@
-# docker-scratch-java-jdk
-Java jdk in scratch
+# docker-scratch-java-jdk [![Release Github Packages](https://github.com/antyung88/docker-scratch-java-jdk/actions/workflows/release.yml/badge.svg)](https://github.com/antyung88/docker-scratch-java-jdk/actions/workflows/release.yml)
+Java jdk in scratch 
 
 # Usage
 

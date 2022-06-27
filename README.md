@@ -4,6 +4,8 @@ Java jdk in scratch
 # Usage
 
 ```
+FROM scratch
+
 # Export Path
 ENV PATH="/lib/runtime/bin:${PATH}"
 
